@@ -1,1 +1,17 @@
-{"componentChunkName":"component---src-templates-event-js","path":"/jsheroes","result":{"data":{"event":{"name":"JSHeroes","url":"https://jsheroes.io/","startDate":"April 23 2020","endDate":"April 24 2020","location":"Cluj-Napoca, Romania","slug":"/jsheroes"}},"pageContext":{"eventID":"31517f43-8aac-5d81-b1bd-04400d6f646c"}}}
+{
+  "componentChunkName": "component---src-templates-event-js",
+  "path": "/jsheroes",
+  "result": {
+    "data": {
+      "event": {
+        "name": "JSHeroes",
+        "url": "https://jsheroes.io/",
+        "startDate": "April 23 2020",
+        "endDate": "April 24 2020",
+        "location": "Cluj-Napoca, Romania",
+        "slug": "/jsheroes"
+      }
+    },
+    "pageContext": { "eventID": "31517f43-8aac-5d81-b1bd-04400d6f646c" }
+  }
+}

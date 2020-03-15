@@ -1,7 +1,9 @@
 export const theme = {
   space: [0, 4, 8, 16, 32],
   fonts: {
-    body: "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif"
+    footer: "Anonymous Pro",
+    body:
+      "Anonymous Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif"
   },
   fontSizes: [16, 18, 20, 22, 27, 36],
   lineHeights: {
@@ -11,7 +13,10 @@ export const theme = {
   colors: {
     gray: ["#efefef", "#ddd", "#333", "#111"],
     background: "#dfdbe5",
-    primary: "#874f8a"
+    limestone: "#9c92ac",
+    primary: "#874f8a",
+    accent: "#17417f",
+    eggplant: "#2a2135"
   },
   sizes: {
     default: "90vw",
@@ -73,10 +78,16 @@ export const theme = {
       borderBottom: "1px solid",
       borderColor: "gray.1",
       padding: 2,
+      a: { color: "gray.3" },
       "&:focus-within,&:hover": {
-        backgroundColor: "gray.0"
+        backgroundColor: "gray.0",
+        color: "primary",
+        a: {
+          color: "primary"
+        }
       }
-    }
+    },
+    footer: { backgroundColor: "primary" }
   }
 };
 

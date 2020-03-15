@@ -1,0 +1,9 @@
+- name: "Self-Care: An A To Z Guide"
+  description: "A more or less definitive guide to taking care of yourself."
+  type: "Article"
+  url: https://www.buzzfeed.com/annaborges/self-care-tips-guide
+
+- name: "Aloe Bud"
+  description: "Aloe Bud is your self-care pocket companion."
+  type: "App"
+  url: https://aloebud.com/

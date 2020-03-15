@@ -7,17 +7,16 @@ exports.onPreBootstrap = ({ reporter }, options) => {
     fs.mkdirSync(contentPath);
   }
 };
-// 2. define the event type
+// 2. define the resource type
 exports.sourceNodes = ({ actions }) => {
   actions.createTypes(`
-    type Event implements Node @dontInfer {
+    type Resource implements Node @dontInfer {
         id: ID!
         name: String!
-        location: String!
-        startDate: Date! @dateformat @proxy(from: "start_date") 
-        endDate: Date! @dateformat @proxy(from: "end_date")
         url: String!
         slug: String! 
+        type: String!
+        description: String!
     }`);
 };
 // 3, define resolvers for any custom fields (i.e., slug)
@@ -34,26 +33,26 @@ exports.createResolvers = ({ createResolvers }, options) => {
   };
 
   createResolvers({
-    Event: {
+    Resource: {
       slug: {
         resolve: source => slugify(source.name)
       }
     }
   });
 };
-// 4. query for events and create pages
+// 4. query for resources and create pages
 
 exports.createPages = async ({ actions, graphql, reporter }, options) => {
   const basePath = options.basePath || "/";
   actions.createPage({
     path: basePath,
-    component: require.resolve("./src/templates/events.js")
+    component: require.resolve("./src/templates/resources.js")
   });
 
   const result = await graphql(
     `
       query {
-        allEvent(sort: { fields: startDate, order: ASC }) {
+        allResource(sort: { fields: name, order: ASC }) {
           nodes {
             id
             slug
@@ -64,19 +63,19 @@ exports.createPages = async ({ actions, graphql, reporter }, options) => {
   );
 
   if (result.errors) {
-    reporter.panic("error loading events", result.errors);
+    reporter.panic("error loading resources", result.errors);
     return;
   }
 
-  const events = result.data.allEvent.nodes;
+  const resources = result.data.allResource.nodes;
 
-  events.forEach(event => {
-    const slug = event.slug;
+  resources.forEach(resource => {
+    const slug = resource.slug;
     actions.createPage({
       path: slug,
-      component: require.resolve("./src/templates/event.js"),
+      component: require.resolve("./src/templates/resource.js"),
       context: {
-        eventID: event.id
+        resourceID: resource.id
       }
     });
   });

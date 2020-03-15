@@ -1,0 +1,24 @@
+- name: "Self-Care: An A To Z Guide"
+  description: "A more or less definitive guide to taking care of yourself."
+  type: "Article"
+  url: https://www.buzzfeed.com/annaborges/self-care-tips-guide
+
+- name: "Aloe Bud"
+  description: "Aloe Bud is your self-care pocket companion."
+  type: "App"
+  url: https://aloebud.com/
+
+- name: "Shine"
+  description: "Shine is an award-winning app and community for people with anxiety and depression."
+  type: "App"
+  url: https://join.shinetext.com/
+
+- name: "Care for your Coronavirus anxiety"
+  description: "Resources for anxiety and your mental health in a global climate of uncertainty."
+  type: "Website"
+  url: https://www.virusanxiety.com/?utm_source=Shine&utm_medium=Sumo
+
+- name: "How to Be Well: The 6 Keys to a Happy and Healthy Life"
+  description: "Dr. Lipman discusses various ways to live a healthier life by improving your diet, sleep hygiene, movement and ability to connect, unwind, and protect oneself from life's elements."
+  type: "Book"
+  url: https://www.goodreads.com/book/show/35721118-how-to-be-well

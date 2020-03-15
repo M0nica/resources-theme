@@ -6,7 +6,7 @@ export default class Icon extends React.Component {
     return (
       <svg
         sx={{ margin: "0 auto", width: "50%", display: "block" }}
-        class="illustration"
+        className="illustration"
         width="1155"
         viewBox="0 0 1155 550"
         fill="none"
