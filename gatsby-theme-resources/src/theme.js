@@ -48,7 +48,8 @@ export const theme = {
       fontFamily: "body",
       fontSize: 1,
       lineHeight: "body",
-      backgroundColor: "background"
+      backgroundColor: "background",
+      overflowWrap: "break-word"
     }
   },
   styles: {

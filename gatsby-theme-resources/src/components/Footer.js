@@ -3,9 +3,6 @@ import { jsx } from "theme-ui";
 import React from "react";
 import Kofi from "./Kofi";
 
-// import { config } from "@fortawesome/fontawesome-svg-core";
-// config.autoAddCss = false;
-
 const Footer = () => {
   return (
     <footer

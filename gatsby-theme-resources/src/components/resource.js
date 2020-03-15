@@ -7,8 +7,10 @@ const Resource = ({ name, url, type, description }) => (
   <div>
     {type && <ResourceType>{type}</ResourceType>}
     <h2> {name}</h2> {description && description}
+    <p>Website:</p>
     <p>
-      Website: <Styled.a href={url}>{url}</Styled.a>
+      {" "}
+      <Styled.a href={url}>{url}</Styled.a>
     </p>
   </div>
 );

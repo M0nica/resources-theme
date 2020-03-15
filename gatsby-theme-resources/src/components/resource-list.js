@@ -109,7 +109,8 @@ const ResourceList = ({ resources }) => {
                 <Styled.li key={resource.id}>
                   <strong>
                     <Link to={resource.slug}>
-                      {resource.name} <FontAwesomeIcon icon={faLink} />
+                      {resource.name}{" "}
+                      <FontAwesomeIcon icon={faLink} sx={{ width: "1em" }} />
                     </Link>{" "}
                     {resource.type && (
                       <ResourceType>{resource.type}</ResourceType>

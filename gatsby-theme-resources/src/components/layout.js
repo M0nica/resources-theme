@@ -7,6 +7,9 @@ import Stereo from "../Stereo";
 
 import Footer from "./Footer";
 
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+
 export const TitleComponent = () => (
   <StaticQuery
     query={graphql`
