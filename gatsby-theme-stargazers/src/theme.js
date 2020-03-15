@@ -1,9 +1,9 @@
 export const theme = {
   space: [0, 4, 8, 16, 32],
   fonts: {
-    footer: "Anonymous Pro",
+    footer: "Work Sans",
     body:
-      "Anonymous Pro, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif"
+      "Work Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif"
   },
   fontSizes: [16, 18, 20, 22, 27, 36],
   lineHeights: {
@@ -19,8 +19,8 @@ export const theme = {
     eggplant: "#2a2135"
   },
   sizes: {
-    default: "90vw",
-    max: "540px"
+    default: "100vw",
+    max: "960px"
   },
   text: {
     heading: {
@@ -68,6 +68,14 @@ export const theme = {
       backgroundColor: "background",
       textAlign: "center"
     },
+    a: {
+      fontWeight: "bold",
+      color: "gray.3",
+      "&:focus-within,&:hover": {
+        color: "primary"
+      }
+    },
+
     ul: {
       borderTop: "1px solid",
       borderColor: "gray.0",

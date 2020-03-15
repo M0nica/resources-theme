@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui";
 import React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout";
@@ -17,12 +19,26 @@ export const query = graphql`
 
 const ResourceTemplate = ({ data: { resource } }) => {
   const { slug } = resource;
-  const basePath = slug.match(/\/[a-z]+\//g)[0] || "/";
+  const basePath = slug.match(/\/[a-z]+\//g)
+    ? slug.match(/\/[a-z]+\//g)[0]
+    : "/";
 
   return (
     <Layout>
       <Resource {...resource} />
-      <Link to={basePath}> View All Resources</Link>
+      <Link
+        to={basePath}
+        sx={{
+          fontWeight: "bold",
+          color: "primary",
+          "&:focus-within,&:hover": {
+            color: "gray.3"
+          }
+        }}
+      >
+        {" "}
+        View All Resources
+      </Link>
     </Layout>
   );
 };

@@ -38,16 +38,14 @@ const ResourceList = ({ resources }) => {
   const allResources = resources;
   const hasSearchResults = filteredData && query !== emptyQuery;
   const processedResources = hasSearchResults ? filteredData : allResources;
-
+  const alphabet = "abcdefghijklmopqrstuvwxyz".split("");
+  const addedLetter = {};
   return (
     <>
       <div
         className="searchBox"
         sx={{
-          marginLeft: "5em",
-          marginRight: "5em",
-          maxWidth: 700,
-          margin: "0 auto"
+          textAlign: "center"
         }}
       >
         <input
@@ -65,8 +63,7 @@ const ResourceList = ({ resources }) => {
             marginBottom: "1rem",
             fontSize: "1.1rem",
             fontWeight: "500",
-            width: "80%",
-            maxWidth: "80%",
+            width: "70%",
             lineHeight: "1"
           }}
         />{" "}
@@ -98,18 +95,32 @@ const ResourceList = ({ resources }) => {
       )}
       <Styled.ul>
         {(processedResources.length ? processedResources : resources).map(
-          resource => (
-            <Styled.li key={resource.id}>
-              <strong>
-                <Link to={resource.slug}>
-                  {resource.name} <FontAwesomeIcon icon={faLink} />
-                </Link>{" "}
-                {resource.type && <ResourceType>{resource.type}</ResourceType>}
-              </strong>
-              <br />
-              {resource.description && resource.description}
-            </Styled.li>
-          )
+          resource => {
+            const firstLetter = resource.name.split("")[0];
+            if (addedLetter[firstLetter]) {
+              addedLetter[firstLetter]++;
+            } else {
+              addedLetter[firstLetter] = 1;
+            }
+            return (
+              <>
+                {addedLetter[firstLetter] === 1 && <h2>{firstLetter}</h2>}
+
+                <Styled.li key={resource.id}>
+                  <strong>
+                    <Link to={resource.slug}>
+                      {resource.name} <FontAwesomeIcon icon={faLink} />
+                    </Link>{" "}
+                    {resource.type && (
+                      <ResourceType>{resource.type}</ResourceType>
+                    )}
+                  </strong>
+                  <br />
+                  {resource.description && resource.description}
+                </Styled.li>
+              </>
+            );
+          }
         )}
       </Styled.ul>
     </>

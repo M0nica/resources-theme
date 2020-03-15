@@ -21,9 +21,14 @@ const Footer = () => {
     >
       <div>
         {" "}
-        <h2> Nice to see you! 👋🏾 💐</h2>
-        <h3>Would you like to tend to this project?</h3>
-        Contribute a resource or <Kofi />!
+        <h2> Nice to see you! 👋🏾 </h2>
+        {
+          //  <h3>Would you like to tend to this project? 🌱</h3>
+          // Contribute a resource!
+        }
+        <p>
+          Maintained by<a href="https://www.aboutmonica.com"> Monica Powell</a>
+        </p>
       </div>
     </footer>
   );
