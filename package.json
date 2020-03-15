@@ -1,7 +1,7 @@
 {
   "private": true,
   "workspaces": [
-    "gatsby-theme-stargazers",
+    "gatsby-theme-resources",
     "site"
   ]
 }

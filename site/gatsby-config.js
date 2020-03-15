@@ -8,7 +8,7 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-theme-stargazers",
+      resolve: "gatsby-theme-resources",
       options: { contentPath: "resources", basePath: "/" }
     }
   ]
