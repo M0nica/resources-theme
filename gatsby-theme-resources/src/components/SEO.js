@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import defaultMetaImage from "./images/site-preview.png";
 
-function SEO({ lang = "en-US", description, title, slug }) {
+function SEO({ lang = "en-US", description, title, slug, meta }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -86,7 +86,7 @@ function SEO({ lang = "en-US", description, title, slug }) {
           name: `twitter:description`,
           content: metaDescription
         }
-      ]}
+      ].concat(meta)}
     />
   );
 }
