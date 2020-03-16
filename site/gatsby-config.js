@@ -2,9 +2,11 @@ module.exports = {
   siteMetadata: {
     title: `Treat Yourself`,
     description: `Self Care Resources`,
-    kofi: "https://ko-fi.com/m0nica"
-    // siteUrl: `https://www.gatsbyjs.org`,
-    // description: `Blazing fast modern site generator for React`
+    longDescription:
+      "A directory of self care resources to help you treat yourself.",
+    kofi: "https://ko-fi.com/m0nica",
+    siteUrl: "https://treatyourself.netlify.com/",
+    image: `src/images/site-preview.png`
   },
   plugins: [
     {

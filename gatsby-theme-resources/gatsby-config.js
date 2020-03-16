@@ -1,8 +1,9 @@
 module.exports = ({ contentPath = "data", basePath = "/" }) => ({
   siteMetadata: {
     title: `Gatsby`,
-    // siteUrl: `https://www.gatsbyjs.org`,
-    description: `Blazing fast modern site generator for React`
+    siteUrl: `https://www.gatsbyjs.org`,
+    description: `Blazing fast modern site generator for React`,
+    longDescription: `Blazing fast modern site generator for React`
   },
   plugins: [
     "gatsby-plugin-theme-ui",

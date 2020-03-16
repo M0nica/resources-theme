@@ -4,7 +4,7 @@ import React from "react";
 import { Heading, Container, Styled } from "theme-ui";
 import { StaticQuery, graphql } from "gatsby";
 import Stereo from "../Stereo";
-
+import SEO from "./SEO";
 import Footer from "./Footer";
 
 import { config } from "@fortawesome/fontawesome-svg-core";
@@ -36,6 +36,7 @@ export const TitleComponent = () => (
 const Layout = ({ children }) => {
   return (
     <>
+      <SEO title="Treat Yourself" />
       <link
         href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap"
         rel="stylesheet"
