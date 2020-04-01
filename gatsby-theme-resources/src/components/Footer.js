@@ -27,10 +27,11 @@ const Footer = () => {
           Maintained by<a href="https://www.aboutmonica.com"> Monica Powell</a>
         </p>
         <p>
-          Open a Pull Request to submit resources on{" "}
+          Open a pull request to submit resources on{" "}
           <a href="https://github.com/M0nica/resources-theme/edit/master/site/resources/resources.yml">
             GitHub
           </a>
+          . More ways to submit are coming soon!
         </p>
       </div>
     </footer>
