@@ -2,7 +2,11 @@
   description: "A more or less definitive guide to taking care of yourself."
   type: "Article"
   url: https://www.buzzfeed.com/annaborges/self-care-tips-guide
-
+  
+- name: "Taking Care of Your Mental Well-Being During a Pandemic"
+  description: "Tips and strategies from a mental health expert on coping with stress, keeping up routines, and staying connected while in isolation"
+  type: "Article"
+  url: https://nexus.jefferson.edu/life-at-jefferson/taking-care-of-your-mental-well-being-during-a-pandemic/
 - name: "Aloe Bud"
   description: "Aloe Bud is your self-care pocket companion."
   type: "App"
