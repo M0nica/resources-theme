@@ -27,3 +27,9 @@
   description: "Judgement-free tips for decluttering and cleaning your home."
   type: "Book"
   url: https://www.unfuckyourhabitat.com/get-the-book/
+
+- name: "Crisis Text Line"
+  description: "Text from anywhere in the USA to text with a trained Crisis Counselor. You can access this resource 
+  by texting  HOME to 741741 in US or texting 686868 in Canada."
+  type: "Hotline"
+  url: https://www.crisistextline.org/
